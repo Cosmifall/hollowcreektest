@@ -5,11 +5,11 @@ Config = {
 	DutyLocation            = vector4(1048.7, -3100.62, -38.2, 88.02),
 	DropLocation            = vector4(1048.224, -3097.071, -38.999, 274.810),
 	SellMaterials           = true, --  allow players to sell materials to a ped
-	LimitedMaterials        = true, -- limit the amount of materials that can be sold
+	LimitedMaterials        = false, -- limit the amount of materials that can be sold
 	SellPed                 = vector4(1049.84, -3094.08, -40.0, 178.84),
 	DrawPackageLocationBlip = true,
-	PickupActionDuration    = math.random(4000, 6000),
-	DeliveryActionDuration  = 5000,
+	PickupActionDuration    = math.random(1000, 2000),
+	DeliveryActionDuration  = 2000,
 	PickupBoxModel          = 'prop_cs_cardbox_01',
 
 	PickupLocations         = {

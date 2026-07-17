@@ -1,104 +1,20 @@
 ================================================================
-======== txAdmin v8.1.1 atop fxserver 32561 Starting - 7/14/2026, 5:57:38 PM
+======== txAdmin v8.1.1 atop fxserver 32561 Starting - 7/16/2026, 11:04:44 PM
 ================================================================
-[17:58:54][Cosmi_fall] created admins file
-[18:00:47][Cosmi_fall] Config changes: general.serverName
-[18:00:47][Cosmi_fall] Changing global settings via setup stepper and started Deployer.
-[18:01:58][Cosmi_fall] Setting recipe.
-[18:17:54][Cosmi_fall] Running recipe.
-[18:34:15][Cosmi_fall] Config changes: server.dataPath
-[18:34:15][Cosmi_fall] Completed and committed server deploy.
-[18:40:38][Cosmi_fall] executed "restart"
-[18:41:17][Cosmi_fall] executed "RESTART SERVER"
-[18:48:57][Cosmi_fall] executed "STOP SERVER"
-[18:52:16][Cosmi_fall] executed "START SERVER"
-[20:12:07][Cosmi_fall] Ensured resource "qb-crafting"
-[20:12:32][Cosmi_fall] executed "RESTART SERVER"
-[20:35:57][Cosmi_fall] executed "RESTART SERVER"
-[20:49:25][Cosmi_fall] executed "RESTART SERVER"
-[20:54:19][Cosmi_fall] executed "RESTART SERVER"
-[21:00:44][Cosmi_fall] executed "RESTART SERVER"
-[21:04:04][Cosmi_fall] Ensured resource "qb-pawnshop"
-[21:04:07][Cosmi_fall] Refreshed resources
-[21:04:30][Cosmi_fall] executed "RESTART SERVER"
-[21:07:10][Cosmi_fall] Ensured resource "qb-pawnshop"
-[21:31:24][Cosmi_fall] Ensured resource "qb-scrapyard"
-[21:35:32][Cosmi_fall] Ensured resource "qb-scrapyard"
-[21:43:10][Cosmi_fall] Ensured resource "qb-scrapyard"
-[22:17:23][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:18:44][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:22:00][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:23:56][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:24:53][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:25:46][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:27:27][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:29:03][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:31:39][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:36:25][Cosmi_fall] Ensured resource "qb-pawnshop"
-[22:45:40][Cosmi_fall] Ensured resource "qb-smallresources"
-[22:45:54][Cosmi_fall] Ensured resource "qb-smallresources"
-[22:47:05][Cosmi_fall] Ensured resource "qb-smallresources"
-[22:47:19][Cosmi_fall] Ensured resource "qb-smallresources"
-[22:47:41][Cosmi_fall] Ensured resource "qb-smallresources"
-[22:47:45][Cosmi_fall] Ensured resource "qb-smallresources"
-[22:48:03][Cosmi_fall] Ensured resource "qb-smallresources"
-[22:48:30][Cosmi_fall] executed "RESTART SERVER"
-[22:52:06][Cosmi_fall] Ensured resource "qb-smallresources"
-[23:03:38][Cosmi_fall] executed "RESTART SERVER"
-[23:10:47][Cosmi_fall] Ensured resource "qb-crafting"
-[23:24:53][Cosmi_fall] executed "RESTART SERVER"
-[23:30:49][Cosmi_fall] executed "RESTART SERVER"
-[23:34:22][Cosmi_fall] Ensured resource "qb-crafting"
-[23:35:09][Cosmi_fall] executed "RESTART SERVER"
-[23:40:14][Cosmi_fall] Ensured resource "qb-crafting"
-[23:41:49][Cosmi_fall] Refreshed resources
-[23:41:54][Cosmi_fall] Ensured resource "qb-core"
-[23:42:08][Cosmi_fall] executed "RESTART SERVER"
-[23:45:19][Cosmi_fall] Ensured resource "qb-crafting"
-[23:53:05][Cosmi_fall] executed "RESTART SERVER"
-[23:57:09][Cosmi_fall] executed "RESTART SERVER"
-[00:02:00][Cosmi_fall] executed "RESTART SERVER"
-[00:05:36][Cosmi_fall] executed "RESTART SERVER"
-[00:07:41][Cosmi_fall] executed "RESTART SERVER"
-[00:10:25][Cosmi_fall] executed "RESTART SERVER"
-[00:12:16][Cosmi_fall] executed "RESTART SERVER"
-[00:16:43][Cosmi_fall] executed "RESTART SERVER"
-[00:22:46][Cosmi_fall] executed "RESTART SERVER"
-[00:48:11][Cosmi_fall] Ensured resource "qb-bankrobbery"
-[01:06:44][Cosmi_fall] Ensured resource "qb-doorlock"
-[01:06:54][Cosmi_fall] Ensured resource "qb-minigames"
-[01:08:14][Cosmi_fall] Ensured resource "qb-bankrobbery"
-[01:10:43][Cosmi_fall] Ensured resource "qb-doorlock"
-[01:13:48][Cosmi_fall] Ensured resource "qb-doorlock"
-[01:13:52][Cosmi_fall] Ensured resource "qb-bankrobbery"
-[01:25:09][Cosmi_fall] executed "RESTART SERVER"
-[01:37:56][Cosmi_fall] executed "RESTART SERVER"
-[01:51:19][Cosmi_fall] Ensured resource "qb-smallresources"
-[02:06:04][Cosmi_fall] executed "STOP SERVER"
 ================================================================
-======== txAdmin v8.1.1 atop fxserver 32561 Starting - 7/15/2026, 4:09:48 AM
+======== Log Rotated - 7/16/2026, 11:04:47 PM                   
 ================================================================
-[04:25:34][Cosmi_fall] logged in from 127.0.0.1 via cfxre auth
-[04:26:11][Cosmi_fall] executed "RESTART SERVER"
-[04:31:28][Cosmi_fall] Ensured resource "qb-dumpstersearch"
-[04:37:05][Cosmi_fall] Ensured resource "qb-dumpstersearch"
-[04:44:19][Cosmi_fall] Ensured resource "qb-dumpstersearch"
-[04:46:08][Cosmi_fall] Ensured resource "qb-dumpstersearch"
-[04:48:21][Cosmi_fall] Ensured resource "qb-dumpstersearch"
-[04:51:06][Cosmi_fall] Ensured resource "qb-dumpstersearch"
-[04:58:51][Cosmi_fall] Ensured resource "qb-dumpstersearch"
-[05:00:52][Cosmi_fall] executed "STOP SERVER"
-================================================================
-======== txAdmin v8.1.1 atop fxserver 32561 Starting - 7/15/2026, 6:01:04 PM
-================================================================
-[18:02:18][Cosmi_fall] logged in from 127.0.0.1 via cfxre auth
-[18:24:30][Cosmi_fall] executed "RESTART SERVER"
-[18:30:25][Cosmi_fall] Ensured resource "qb-hud"
-[18:33:59][Cosmi_fall] executed "RESTART SERVER"
-[18:38:56][Cosmi_fall] Ensured resource "qb-drugs"
-[18:46:57][Cosmi_fall] Ensured resource "qb-weed"
-[18:49:01][Cosmi_fall] Ensured resource "qb-weed"
-[19:27:29][Cosmi_fall] Ensured resource "qb-weed"
-[19:28:03][Cosmi_fall] Ensured resource "qb-weed"
-[19:31:21][Cosmi_fall] Ensured resource "qb-weed"
-[19:42:44][Cosmi_fall] executed "STOP SERVER"
+[23:05:04][Cosmi_fall] logged in from 127.0.0.1 via cfxre auth
+[23:54:15][Cosmi_fall] Ensured resource "qb-core"
+[23:55:29][Cosmi_fall] Ensured resource "qb-core"
+[23:55:47][Cosmi_fall] executed "RESTART SERVER"
+[00:19:13][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[00:26:26][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[00:31:06][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[00:33:39][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[00:36:52][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[00:37:42][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[00:40:18][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[00:43:07][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[00:44:50][Cosmi_fall] Ensured resource "qb-dumpstersearch"
+[01:11:52][Cosmi_fall] Ensured resource "qb-dumpstersearch"

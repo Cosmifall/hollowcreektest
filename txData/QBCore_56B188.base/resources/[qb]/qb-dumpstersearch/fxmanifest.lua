@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
-author 'Copilot'
+author 'Cosmifall'
 description 'Dumpster search interaction for QB-Core'
 version '1.0.0'
 

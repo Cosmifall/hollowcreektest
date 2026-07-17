@@ -2,6 +2,17 @@ local QBCore = exports['qb-core']:GetCoreObject()
 local searching = false
 local hasRegisteredTarget = false
 
+local function getEntityNetworkId(entity)
+    local netId = 0
+    if entity and DoesEntityExist(entity) and NetworkGetEntityIsNetworked(entity) then
+        local success, networkId = pcall(NetworkGetNetworkIdFromEntity, entity)
+        if success and networkId then
+            netId = networkId
+        end
+    end
+    return netId
+end
+
 local function loadAnimDict(dict)
     if not HasAnimDictLoaded(dict) then
         RequestAnimDict(dict)
@@ -20,13 +31,21 @@ local function stopSearchAnim()
     ClearPedTasks(PlayerPedId())
 end
 
+local function getDumpsterSearchDuration()
+    return tonumber(Config.DumpsterSearchDuration) or tonumber(Config.SearchDuration) or 4000
+end
+
+local function getMailboxSearchDuration()
+    return tonumber(Config.MailboxSearchDuration) or tonumber(Config.SearchDuration) or 4000
+end
+
 local function startSearch()
     if searching then return end
     searching = true
 
     playSearchAnim()
 
-    QBCore.Functions.Progressbar('dumpster_search', Lang:t('progress.searching'), Config.SearchDuration, false, true, {
+    QBCore.Functions.Progressbar('dumpster_search', Lang:t('progress.searching'), getDumpsterSearchDuration(), false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
@@ -55,11 +74,45 @@ RegisterNetEvent('qb-dumpstersearch:client:notifySuccess', function(items)
 end)
 
 RegisterNetEvent('qb-dumpstersearch:client:cooldownActive', function(secondsLeft)
-    QBCore.Functions.Notify(('This dumpster is still locked for %s seconds.'):format(secondsLeft), 'error')
+    QBCore.Functions.Notify(Lang:t('notify.dumpster_cooldown', { seconds = secondsLeft }), 'error')
+end)
+
+RegisterNetEvent('qb-dumpstersearch:client:mailboxCooldownActive', function(secondsLeft)
+    QBCore.Functions.Notify(Lang:t('notify.mailbox_cooldown', { seconds = secondsLeft }), 'error')
+end)
+
+RegisterNetEvent('qb-dumpstersearch:client:noLockpick', function()
+    QBCore.Functions.Notify(Lang:t('notify.no_lockpick'), 'error')
+end)
+
+RegisterNetEvent('qb-dumpstersearch:client:mailboxLockpickBroke', function()
+    QBCore.Functions.Notify(Lang:t('notify.mailbox_lockpick_broke'), 'error')
 end)
 
 RegisterNetEvent('qb-dumpstersearch:client:startSearch', function()
     startSearch()
+end)
+
+RegisterNetEvent('qb-dumpstersearch:client:startMailboxSearch', function()
+    if searching then return end
+
+    searching = true
+    playSearchAnim()
+
+    QBCore.Functions.Progressbar('mailbox_search', Lang:t('progress.breaking_mailbox'), getMailboxSearchDuration(), false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('qb-dumpstersearch:server:giveMailboxReward')
+        stopSearchAnim()
+        searching = false
+    end, function()
+        QBCore.Functions.Notify(Lang:t('notify.failed'), 'error')
+        stopSearchAnim()
+        searching = false
+    end)
 end)
 
 CreateThread(function()
@@ -75,14 +128,7 @@ CreateThread(function()
                         if searching then return end
                         local coords = GetEntityCoords(entity)
                         local heading = GetEntityHeading(entity)
-                        local netId = 0
-
-                        if entity and DoesEntityExist(entity) and NetworkGetEntityIsNetworked(entity) then
-                            local success, networkId = pcall(NetworkGetNetworkIdFromEntity, entity)
-                            if success and networkId then
-                                netId = networkId
-                            end
-                        end
+                        local netId = getEntityNetworkId(entity)
 
                         TriggerServerEvent('qb-dumpstersearch:server:requestSearch', netId, GetEntityModel(entity), coords.x, coords.y, coords.z, heading)
                     end,
@@ -90,6 +136,25 @@ CreateThread(function()
             },
             distance = 2.5,
         })
+
+        exports['qb-target']:AddTargetModel(Config.MailboxModels, {
+            options = {
+                {
+                    icon = 'fa-solid fa-envelope-open-text',
+                    label = Lang:t('target.break_mailbox'),
+                    action = function(entity)
+                        if searching then return end
+                        local coords = GetEntityCoords(entity)
+                        local heading = GetEntityHeading(entity)
+                        local netId = getEntityNetworkId(entity)
+
+                        TriggerServerEvent('qb-dumpstersearch:server:requestMailboxSearch', netId, GetEntityModel(entity), coords.x, coords.y, coords.z, heading)
+                    end,
+                },
+            },
+            distance = 2.0,
+        })
+
         hasRegisteredTarget = true
     end
 end)

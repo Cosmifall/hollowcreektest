@@ -21,14 +21,14 @@ local Sales, Stock, salesLoc = {}, {}, Config.SellPed
 
 if Config.SellMaterials then
     Sales = { -- key is item, value is price
-        metalscrap = 2,
-        plastic = 2,
-        copper = 2,
-        rubber = 2,
-        iron = 2,
-        aluminum = 2,
-        steel = 2,
-        glass = 2,
+        metalscrap = 5,
+        plastic = 5,
+        copper = 5,
+        rubber = 5,
+        iron = 5,
+        aluminum = 5,
+        steel = 5,
+        glass = 5,
     }
 end
 if Config.LimitedMaterials then
