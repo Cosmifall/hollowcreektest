@@ -1,5 +1,5 @@
 Config = {
-    EnableSkillCheck = true,
+    EnableSkillCheck = false,
     ImageBasePath = 'nui://qb-inventory/html/images/',
     lockpick_bench = {
         object = `prop_tool_bench02`,
