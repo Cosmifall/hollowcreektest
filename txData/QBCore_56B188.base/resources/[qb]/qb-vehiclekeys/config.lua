@@ -13,25 +13,25 @@ Config.LockToggleAnimation = {
 }
 Config.LockAnimSound = 'keys'
 Config.LockToggleSound = 'lock'
-Config.LockToggleDist = 8.0
+Config.LockToggleDist = 10.0
 
 -- NPC Vehicle Lock States
-Config.LockNPCDrivingCars = true       -- Lock state for NPC cars being driven by NPCs [true = locked, false = unlocked]
+Config.LockNPCDrivingCars = false       -- Lock state for NPC cars being driven by NPCs [true = locked, false = unlocked]
 Config.LockNPCParkedCars = true        -- Lock state for NPC parked cars [true = locked, false = unlocked]
 Config.UseKeyfob = false               -- you can set this true if you dont need ui
 -- Lockpick Settings
-Config.RemoveLockpickNormal = 0.5      -- Chance to remove lockpick on fail
-Config.RemoveLockpickAdvanced = 0.2    -- Chance to remove advanced lockpick on fail
+Config.RemoveLockpickNormal = 0.3      -- Chance to remove lockpick on fail
+Config.RemoveLockpickAdvanced = 0.0    -- Chance to remove advanced lockpick on fail
 -- Carjack Settings
 Config.CarJackEnable = true            -- True allows for the ability to car jack peds.
-Config.CarjackingTime = 7500           -- How long it takes to carjack
-Config.DelayBetweenCarjackings = 10000 -- Time before you can carjack again
+Config.CarjackingTime = 5500           -- How long it takes to carjack
+Config.DelayBetweenCarjackings = 1000 -- Time before you can carjack again
 Config.CarjackChance = {
     ['2685387236'] = 0.0,              -- melee
-    ['416676503'] = 0.5,               -- handguns
-    ['-957766203'] = 0.75,             -- SMG
-    ['860033945'] = 0.90,              -- shotgun
-    ['970310034'] = 0.90,              -- assault
+    ['416676503'] = 0.99,               -- handguns
+    ['-957766203'] = 0.99,             -- SMG
+    ['860033945'] = 0.99,              -- shotgun
+    ['970310034'] = 0.99,              -- assault
     ['1159398588'] = 0.99,             -- LMG
     ['3082541095'] = 0.99,             -- sniper
     ['2725924767'] = 0.99,             -- heavy
@@ -40,15 +40,15 @@ Config.CarjackChance = {
 }
 
 -- Hotwire Settings
-Config.HotwireChance = 0.5        -- Chance for successful hotwire or not
-Config.TimeBetweenHotwires = 5000 -- Time in ms between hotwire attempts
-Config.minHotwireTime = 20000     -- Minimum hotwire time in ms
-Config.maxHotwireTime = 40000     --  Maximum hotwire time in ms
+Config.HotwireChance = 0.8        -- Chance for successful hotwire or not
+Config.TimeBetweenHotwires = 1000 -- Time in ms between hotwire attempts
+Config.minHotwireTime = 2000     -- Minimum hotwire time in ms
+Config.maxHotwireTime = 8000     --  Maximum hotwire time in ms
 
 -- Police Alert Settings
 Config.AlertCooldown = 10000         -- 10 seconds
-Config.PoliceAlertChance = 0.75      -- Chance of alerting police during the day
-Config.PoliceNightAlertChance = 0.50 -- Chance of alerting police at night (times:01-06)
+Config.PoliceAlertChance = 0.35      -- Chance of alerting police during the day
+Config.PoliceNightAlertChance = 0.10 -- Chance of alerting police at night (times:01-06)
 
 -- Job Settings
 Config.SharedKeys = { -- Share keys amongst employees. Employees can lock/unlock any job-listed vehicle
@@ -69,9 +69,7 @@ Config.SharedKeys = { -- Share keys amongst employees. Employees can lock/unlock
 }
 
 -- These vehicles cannot be jacked
-Config.ImmuneVehicles = {
-    'stockade'
-}
+Config.ImmuneVehicles = {}
 
 -- These vehicles will never lock
 Config.NoLockVehicles = {}

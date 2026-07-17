@@ -20,7 +20,7 @@ Config.DrawSprite = true
 Config.DrawDistance = 10.0
 
 -- The color of the sprite in rgb, the first value is red, the second value is green, the third value is blue and the last value is alpha (opacity). Here is a link to a color picker to get these values: https://htmlcolorcodes.com/color-picker/
-Config.DrawColor = { 255, 255, 255, 255 }
+Config.DrawColor = { 125, 125, 125, 125 }
 
 -- The color of the sprite in rgb when the PolyZone is targeted, the first value is red, the second value is green, the third value is blue and the last value is alpha (opacity). Here is a link to a color picker to get these values: https://htmlcolorcodes.com/color-picker/
 Config.SuccessDrawColor = { 220, 20, 60, 255 }
