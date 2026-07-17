@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "general": {
+    "serverName": "test-playground"
+  },
+  "server": {
+    "dataPath": "C:/Users/Nick/Desktop/5Mserver/txData/QBCore_56B188.base/"
+  }
+}
